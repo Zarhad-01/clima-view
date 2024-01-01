@@ -1,0 +1,30 @@
+.forecasts{
+    padding-top: 3em;
+}
+
+/* Tabs */
+.tab {
+    background-color: white;
+    padding:1em;
+}
+
+.active-tab{
+    background-color: salmon;
+}
+
+div.bloc-tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px blue;
+}
+
+
+/* Content of Tabs */
+div.content {
+    display: none;
+}
+
+div.content.active-content {
+    display: block;
+}
