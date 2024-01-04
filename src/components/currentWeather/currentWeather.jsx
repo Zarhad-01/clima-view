@@ -1,17 +1,15 @@
+import { memo } from "react";
 import "./currentWeather.css"
 
+const ParameterRow = ({ label, value }) => (
+    <div className="parameter-row">
+        <span className="label">{label}</span>
+        <span className="value">{value}</span>
+    </div>
+);
+
 const CurrentWeather = ({ data }) => {
-
     const capitalize = (str) => str && str[0].toUpperCase() + str.slice(1);
-
-    const ParameterRow = ({ label, value }) => {
-        return (
-            <div className="parameter-row">
-                <span className="label">{label}</span>
-                <span className="value">{value}</span>
-            </div>
-        )
-    }
 
     return (
         <div className="weather-current">
@@ -23,24 +21,24 @@ const CurrentWeather = ({ data }) => {
                         {capitalize(data.weather[0].description)}
                     </p>
                 </div>
-                <img 
-                    src={`src/assets/weather-icons/${data.weather[0].icon}.png`} 
-                    alt="weather" 
+                <img
+                    src={`src/assets/weather-icons/${data.weather[0].icon}.png`}
+                    alt="weather"
                     className="weather-icon"
                 />
             </div>
             <div className="bottom">
                 <p className="temp">{Math.round(data.main.temp)}°C</p>
                 <div className="weather-details">
-                    <ParameterRow label="Details"    value="" />
+                    <ParameterRow label="Details" value="" />
                     <ParameterRow label="Feels Like" value={`${Math.round(data.main.feels_like)}°C`} />
-                    <ParameterRow label="Wind"       value={`${data.wind.speed} M/H`} />
-                    <ParameterRow label="Humidity"   value={`${data.main.humidity}%`} />
-                    <ParameterRow label="Pressure"   value={`${data.main.pressure} hPa`} />
+                    <ParameterRow label="Wind" value={`${data.wind.speed} M/H`} />
+                    <ParameterRow label="Humidity" value={`${data.main.humidity}%`} />
+                    <ParameterRow label="Pressure" value={`${data.main.pressure} hPa`} />
                 </div>
             </div>
         </div>
     );
 }
 
-export default CurrentWeather;
+export default memo(CurrentWeather);

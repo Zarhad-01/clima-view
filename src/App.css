@@ -5,7 +5,7 @@ body {
 }
 
 .app-container{
-  max-width: 50vw;
+  max-width: 1280px;
   margin: 20px auto;
   padding: 2em;
   background-color: aqua;
@@ -13,5 +13,5 @@ body {
 
 .weather {
   background-color: rgba(249, 79, 79, 0.662);
-  padding: 3em;
+  padding: 2em;
 }

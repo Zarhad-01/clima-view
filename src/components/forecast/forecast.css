@@ -1,30 +1,131 @@
-.forecasts{
+.forecasts {
     padding-top: 3em;
 }
 
 /* Tabs */
+ul.bloc-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    list-style-type: none;
+    height: 200px;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 0;
+}
+
 .tab {
+    background-color: rgb(212, 212, 212);
+    width: 125px;
+    height: 125px;
+    min-width: 7.375em;
+    padding: 16px 16px 0;
+    vertical-align: bottom;
+}
+
+.active-tab {
     background-color: white;
-    padding:1em;
+    max-width: 400px;
+    min-width: 250px;
+    height: 175px;
+    overflow: visible;
 }
 
-.active-tab{
-    background-color: salmon;
-}
-
-div.bloc-tabs {
+.daily-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border: 3px blue;
 }
 
+.daily-temps {
+    align-items: right;
+}
+
+p.date {
+    font-weight: 600;
+    font-size: large;
+    margin-top: 5px;
+}
+
+p.high,
+p.low {
+    margin-top: -5px;
+}
+
+.active-tab p.high,
+.active-tab p.low {
+    margin-top: 0;
+}
+
+p.weather-description {
+    display: none;
+}
+
+.active-tab p.weather-description {
+    display: block;
+}
+
+.active-tab p.high:before {
+    content: "Highs ";
+}
+
+.active-tab p.low:before {
+    content: "Lows ";
+}
+
+.daily-weather-icon {
+    width: 50px;
+}
+
+.active-tab .daily-weather-icon {
+    width: 90px;
+    margin-top: 0px;
+    padding-left: 25px;
+}
 
 /* Content of Tabs */
 div.content {
     display: none;
+    background-color: whitesmoke;
+    padding: 30px;
 }
 
 div.content.active-content {
     display: block;
+    overflow-x: auto;
+}
+
+.forecast-table {
+    overflow-x: auto;
+}
+
+.forecast-icon {
+    width: 120px;
+}
+
+.forecast-temp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+
+.forecast-temp-bar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.forecast-table th {
+    text-align: left;
+}
+
+.forecast-table td {
+  text-align: center;
+  vertical-align: middle;
 }
