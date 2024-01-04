@@ -61,7 +61,7 @@ export const WEATHER_API_KEY = "PLACE API KEY HERE";
 npm run dev
 ```
 
-5. Open your browser and navigate to `http://localhost:3000`.
+5. Open your browser and navigate to `http://localhost:PORT`.
 
 # Usage
 
