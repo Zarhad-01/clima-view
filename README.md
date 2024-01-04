@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Clima-View elegantly manifests the convergence of reactive programming with real-time data integration, underlining a sophisticated grasp of front-end development. This application not only taps into the rich data from OpenWeatherMap API and GeoDB Cities API but also displays the finesse of React's ecosystem to deliver a seamless user experience.
+Clima-View is a weather application that exemplifies the integration of reactive programming with real-time API data, showcasing front-end development techniques.
 
 Leveraging modern React hooks, Clima-View maintains nimble state management and optimizes performance with minimal re-renders. Here's a snapshot of the React features in action:
 - `useState`: Effortlessly tracks component states across renders.
