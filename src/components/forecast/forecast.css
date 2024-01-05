@@ -86,7 +86,7 @@ p.weather-description {
 /* Content of Tabs */
 div.content {
     display: none;
-    background-color: whitesmoke;
+    background-color: #ffffff;
     padding: 30px;
 }
 
@@ -100,7 +100,9 @@ div.content.active-content {
 }
 
 .forecast-icon {
-    width: 120px;
+    margin-top: 15px;
+    width: 80px;
+    padding: 0 24px;
 }
 
 .forecast-temp-container {
@@ -121,11 +123,36 @@ div.content.active-content {
     padding-bottom: 5px;
 }
 
-.forecast-table th {
+.forecast-temp-cell{
+    padding: 10px 0px 0px 1px;
+}
+
+.forecast-table .screen-reader-only {
     text-align: left;
+    padding: 0 20px 0 0;
+    width: 97px;
 }
 
 .forecast-table td {
-  text-align: center;
-  vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.forecast-table {
+    border-collapse: collapse;
+}
+
+.forecast-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+    border-right: 1px solid #dddddd;
+}
+
+.forecast-table td:last-child {
+    border-right: none;
+}
+
+.forecast-table tr:last-child td {
+    border-bottom: none;
 }

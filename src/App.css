@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(201, 201, 201);
+  font-family: FSEmeric, sans-serif;
 }
 
 .app-container{

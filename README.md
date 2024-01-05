@@ -4,9 +4,9 @@
 
 Clima-View is a weather application that exemplifies the integration of reactive programming with real-time API data, showcasing front-end development techniques.
 
-Leveraging modern React hooks, Clima-View maintains nimble state management and optimizes performance with minimal re-renders. Here's a snapshot of the React features in action:
-- `useState`: Effortlessly tracks component states across renders.
-- `useCallback`: Ensures efficiency by memorizing callback functions.
+Leveraging modern React hooks, Clima-View maintains nimble state management and optimises performance with minimal re-renders. Here's a snapshot of the React features in action:
+- `useState`: Tracks component states across renders.
+- `useCallback`: Ensures efficiency by memorising callback functions.
 - `useMemo`: Astutely computes and caches expensive operations.
 
 ## How It Works
@@ -14,11 +14,11 @@ Leveraging modern React hooks, Clima-View maintains nimble state management and 
 Clima-View's architecture is a symphony of modular React components, each serving a distinct purpose:
 
 - `App`: The orchestrator component where the core application logic resides, deftly managing API interactions.
-- `Search`: A user-centric component that gracefully handles location input and fetches corresponding coordinates via the GeoDB Cities API.
+- `Search`: A user-centric component that handles location input and fetches corresponding coordinates via the GeoDB Cities API.
 - `CurrentWeather`: A display component that renders real-time weather conditions, sourced from the OpenWeatherMap API, attuned to the user's location choice.
 - `Forecast`: A forward-looking component that renders a dynamic five-day weather forecast, adapting to changes in location with responsive design patterns.
 
-Each component exemplifies React best practices, utilizing hooks to manage state and effects, while compartmentalizing the user interface into reusable, testable units. Clima-View is a testament to the harmonious integration of API data within a React-driven framework, demonstrating not only technical prowess but also an eye for elegant design.
+Each component exemplifies React best practices, utilising hooks to manage state and effects, while compartmentalising the user interface into reusable, testable units. Clima-View is a testament to the harmonious integration of API data within a React-driven framework, demonstrating not only technical prowess but also an eye for elegant design.
 
 ## Installation
 
