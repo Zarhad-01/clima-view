@@ -1,0 +1,25 @@
+div.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+div.message-body{
+    padding: 2em;
+    background-color: whitesmoke;
+    border-radius: 12px;
+
+}
+
+a.social-link img {
+    width: 150px;
+}
+
+div.socials {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.socials a.linkedin {
+    margin-top: 1em;
+}

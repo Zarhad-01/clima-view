@@ -14,25 +14,29 @@ const Forecast = ({ data }) => {
         <div className="forecasts">
             <ul className="bloc-tabs">
                 {dailyForecast.map((forecast, index) => {
-                    const isActive = activeTab === index;
-                    const iconUrl = `src/assets/weather-icons/${findCommonWeatherIcon(forecast).slice(0, 2)}d.png`;
-                    return (
-                        <li className={isActive ? "tab active-tab" : "tab"} onClick={() => toggleTab(index)} key={index}>
-                            <div className="tag-content">
-                                <p className="date">{index === 0 ? "Today" : formatDate(forecast)}</p>
-                                <div className="daily-container">
-                                    <div className="img-desc">
-                                        <img src={iconUrl} alt="weather" className="daily-weather-icon" />
-                                    </div>
-                                    <div className="daily-temps">
-                                        <p className="weather-description">{summarizeWeatherConditions(forecast)}</p>
-                                        <p className="high">{calculateHighs(forecast)}°C</p>
-                                        <p className="low">{calculateLows(forecast)}°C</p>
+                    // Only render if forecast data is not empty.
+                    if (forecast.length > 0) {
+                        const isActive = activeTab === index;
+                        const iconUrl = `src/assets/weather-icons/${findCommonWeatherIcon(forecast).slice(0, 2)}d.png`;
+                        return (
+                            <li className={isActive ? "tab active-tab" : "tab"} onClick={() => toggleTab(index)} key={index}>
+                                <div className="tag-content">
+                                    <p className="date">{index === 0 ? "Today" : formatDate(forecast)}</p>
+                                    <div className="daily-container">
+                                        <div className="img-desc">
+                                            <img src={iconUrl} alt="weather" className="daily-weather-icon" />
+                                        </div>
+                                        <div className="daily-temps">
+                                            <p className="weather-description">{summarizeWeatherConditions(forecast)}</p>
+                                            <p className="high">{calculateHighs(forecast)}°C</p>
+                                            <p className="low">{calculateLows(forecast)}°C</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    );
+                            </li>
+                        );
+                    }
+                    return null;  // Render nothing if the condition is not met
                 })}
             </ul>
 

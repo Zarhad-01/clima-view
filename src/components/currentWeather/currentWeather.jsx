@@ -13,30 +13,31 @@ const CurrentWeather = ({ data }) => {
 
     return (
         <div className="weather-current">
-            <div className="top">
-                <div>
-                    <p className="city">{data.city}</p>
-                    <p className="weather-descriptions">
-                        {/* Make weather description uppercase */}
-                        {capitalize(data.weather[0].description)}
-                    </p>
-                </div>
+            <div className="city-info">
+                <p className="city">{data.city}</p>
+                <p className="weather-descriptions">
+                    {/* Make weather description uppercase */}
+                    {capitalize(data.weather[0].description)}
+                </p>
+            </div>
+            <div className="weather-img">
                 <img
                     src={`src/assets/weather-icons/${data.weather[0].icon}.png`}
                     alt="weather"
                     className="weather-icon"
                 />
             </div>
-            <div className="bottom">
-                <p className="temp">{Math.round(data.main.temp)}°C</p>
-                <div className="weather-details">
-                    <ParameterRow label="Details" value="" />
-                    <ParameterRow label="Feels Like" value={`${Math.round(data.main.feels_like)}°C`} />
-                    <ParameterRow label="Wind" value={`${data.wind.speed} M/H`} />
-                    <ParameterRow label="Humidity" value={`${data.main.humidity}%`} />
-                    <ParameterRow label="Pressure" value={`${data.main.pressure} hPa`} />
-                </div>
+
+
+            <p className="temp">{Math.round(data.main.temp)}°C</p>
+            <div className="weather-details">
+                <ParameterRow label="Details" value="" />
+                <ParameterRow label="Feels Like" value={`${Math.round(data.main.feels_like)}°C`} />
+                <ParameterRow label="Wind" value={`${data.wind.speed} m/s`} />
+                <ParameterRow label="Humidity" value={`${data.main.humidity}%`} />
+                <ParameterRow label="Pressure" value={`${data.main.pressure} hPa`} />
             </div>
+
         </div>
     );
 }
