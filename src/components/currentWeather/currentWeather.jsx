@@ -22,7 +22,7 @@ const CurrentWeather = ({ data }) => {
             </div>
             <div className="weather-img">
                 <img
-                    src={`src/assets/weather-icons/${data.weather[0].icon}.png`}
+                    src={`assets/weather-icons/${data.weather[0].icon}.png`}
                     alt="weather"
                     className="weather-icon"
                 />

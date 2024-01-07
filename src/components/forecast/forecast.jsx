@@ -17,7 +17,7 @@ const Forecast = ({ data }) => {
                     // Only render if forecast data is not empty.
                     if (forecast.length > 0) {
                         const isActive = activeTab === index;
-                        const iconUrl = `src/assets/weather-icons/${findCommonWeatherIcon(forecast).slice(0, 2)}d.png`;
+                        const iconUrl = `assets/weather-icons/${findCommonWeatherIcon(forecast).slice(0, 2)}d.png`;
                         return (
                             <li className={isActive ? "tab active-tab" : "tab"} onClick={() => toggleTab(index)} key={index}>
                                 <div className="tag-content">
@@ -187,7 +187,7 @@ const renderWeatherRows = (dayForecast) => {
 const renderWeatherSymbol = (forecast) => (
     <img
         className="forecast-icon"
-        src={`src/assets/weather-icons/${forecast.weather[0].icon}.png`}
+        src={`assets/weather-icons/${forecast.weather[0].icon}.png`}
         alt={`${forecast.weather[0].main}`}
     />
 );
