@@ -25,7 +25,7 @@ div.socials a.linkedin {
 }
 
 @media only screen and (max-width: 950px) {
-    a.social-link img {
-        width: 75px;
+    div.logo img {
+        width: 200px;
     }
 }
