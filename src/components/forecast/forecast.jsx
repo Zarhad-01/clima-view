@@ -21,7 +21,7 @@ const Forecast = ({ data }) => {
                         return (
                             <li className={isActive ? "tab active-tab" : "tab"} onClick={() => toggleTab(index)} key={index}>
                                 <div className="tag-content">
-                                    <p className="date">{index === 0 ? "Today" : formatDate(forecast)}</p>
+                                    <p className="date">{formatDate(forecast)}</p>
                                     <div className="daily-container">
                                         <div className="img-desc">
                                             <img src={iconUrl} alt="weather" className="daily-weather-icon" />
