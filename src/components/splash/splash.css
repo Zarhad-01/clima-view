@@ -23,3 +23,9 @@ div.socials {
 div.socials a.linkedin {
     margin-top: 1em;
 }
+
+@media only screen and (max-width: 950px) {
+    a.social-link img {
+        width: 75px;
+    }
+}
